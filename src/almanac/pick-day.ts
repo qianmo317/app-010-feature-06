@@ -11,6 +11,9 @@ export interface PickResult {
   ji: string[];
   ganZhi: string;
   chong: string;
+  sha: string;
+  zhiShen: string;
+  solarTerm?: string;
   reason: string;
 }
 
@@ -52,6 +55,9 @@ export function pickDays(
       ji: yiJi.ji,
       ganZhi: lunar.dayGanZhi,
       chong: yiJi.chong,
+      sha: yiJi.sha,
+      zhiShen: yiJi.zhiShen,
+      solarTerm: lunar.solarTerm,
       reason: reasons.join('；') || '平日常日'
     });
   }

@@ -532,6 +532,206 @@ function injectStyles() {
       border-radius: 8px;
       cursor: pointer;
       margin-top: 20px;
+      font-size: 15px;
+    }
+
+    /* 导出设置面板 */
+    [hidden] { display: none !important; }
+
+    .export-panel {
+      margin-top: 16px;
+    }
+
+    .export-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+    }
+
+    .export-row-label {
+      flex: 0 0 64px;
+      font-weight: bold;
+      color: var(--primary);
+      padding-top: 4px;
+    }
+
+    .export-opt-group {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .export-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .export-check input { cursor: pointer; }
+
+    .export-check.static {
+      background: #f0ece2;
+      color: var(--text-light);
+      cursor: default;
+    }
+
+    .scope-count {
+      margin-left: 6px;
+      font-size: 12px;
+      color: var(--secondary);
+      font-style: normal;
+    }
+
+    .export-preview {
+      font-size: 13px;
+      color: var(--text-light);
+      background: #f0ece2;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 14px;
+    }
+
+    .export-preview.warn {
+      color: var(--accent);
+      background: #fff0f0;
+    }
+
+    .export-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .generate-btn {
+      padding: 10px 28px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .generate-btn:disabled {
+      background: var(--border);
+      cursor: not-allowed;
+    }
+
+    .generate-hint {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    .export-progress {
+      margin-top: 14px;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--primary);
+      background: #f0ece2;
+      border-radius: 6px;
+    }
+
+    .export-history {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .export-run {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      background: #fff;
+    }
+
+    .export-run.done { border-left: 4px solid var(--secondary); }
+    .export-run.has-failed { border-left: 4px solid var(--accent); }
+    .export-run.running { border-left: 4px solid var(--primary); }
+
+    .export-run-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: baseline;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .run-meta { color: var(--text-light); }
+
+    .run-state {
+      margin-left: auto;
+      color: var(--primary);
+      font-size: 13px;
+    }
+
+    .export-run.has-failed .run-state { color: var(--accent); }
+    .export-run.done .run-state { color: var(--secondary); }
+
+    .export-files {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .export-file {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      padding: 6px 10px;
+      background: var(--card-bg);
+      border-radius: 6px;
+    }
+
+    .file-name { font-family: ui-monospace, monospace; color: var(--text); }
+    .file-size { color: var(--text-light); }
+
+    .file-save {
+      margin-left: auto;
+      color: var(--primary);
+      text-decoration: none;
+      border: 1px solid var(--primary);
+      border-radius: 4px;
+      padding: 2px 10px;
+      font-size: 12px;
+    }
+
+    .export-file.failed { background: #fff0f0; }
+    .file-error { color: var(--accent); }
+
+    .file-retry {
+      margin-left: auto;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .file-retry:disabled { opacity: 0.6; cursor: wait; }
+
+    .retry-all-btn {
+      margin-top: 8px;
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 6px 16px;
+      font-size: 13px;
+      cursor: pointer;
     }
 
     /* 农事页 */
