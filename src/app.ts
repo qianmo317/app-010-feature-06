@@ -523,17 +523,6 @@ function injectStyles() {
       font-size: 11px;
     }
 
-    .export-btn {
-      width: 100%;
-      padding: 12px;
-      background: var(--secondary);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
     /* 农事页 */
     .month-index {
       display: flex;

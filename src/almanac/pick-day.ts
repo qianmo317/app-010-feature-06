@@ -1,6 +1,6 @@
 import { scoreDay, getDayYiJi } from './yiji';
 import { solarToLunar } from './lunar';
-import { gregorianToJDN, jdnToGregorian } from '../utils/date';
+import { gregorianToJDN, jdnToGregorian, getWeekDay } from '../utils/date';
 
 export interface PickResult {
   year: number;
@@ -11,6 +11,13 @@ export interface PickResult {
   ji: string[];
   ganZhi: string;
   chong: string;
+  sha: string;
+  chongShengxiao: string;
+  zhiShen: string;
+  jianXing: string;
+  lunarDate: string;
+  solarTerm?: string;
+  weekDay: number;
   reason: string;
 }
 
@@ -52,6 +59,13 @@ export function pickDays(
       ji: yiJi.ji,
       ganZhi: lunar.dayGanZhi,
       chong: yiJi.chong,
+      sha: yiJi.sha,
+      chongShengxiao: yiJi.chongShengxiao,
+      zhiShen: yiJi.zhiShen,
+      jianXing: yiJi.jianXing,
+      lunarDate: lunar.monthName + lunar.dayName,
+      solarTerm: lunar.solarTerm,
+      weekDay: getWeekDay(year, month, day),
       reason: reasons.join('；') || '平日常日'
     });
   }
